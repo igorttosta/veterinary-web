@@ -5,6 +5,7 @@ import HistoryIcon from '@mui/icons-material/History';
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import PetsIcon from '@mui/icons-material/Pets';
 import Settings from "@mui/icons-material/Settings";
+import BabyChangingStationIcon from '@mui/icons-material/BabyChangingStation';
 
 export const NAVIGATION = {
     sidebar: [
@@ -14,9 +15,15 @@ export const NAVIGATION = {
             icon: <HomeIcon />,
         },
         {
+            kind: "divider",
+        },
+        {
             segment: "store",
             title: "Store",
             icon: <StoreIcon />,
+        },
+        {
+            kind: "divider",
         },
         {
             segment: "consultation",
@@ -24,12 +31,20 @@ export const NAVIGATION = {
             icon: <LocalHospitalIcon />,
         },
         {
-            segment: "petshop",
-            title: "Petshop",
+            kind: "divider",
+        },
+        {
+            segment: "pets",
+            title: "My Pet",
             icon: <PetsIcon />,
         },
         {
             kind: "divider",
+        },
+        {
+            segment: "petshop",
+            title: "Petshop",
+            icon: <BabyChangingStationIcon />,
         }
     ],
 
@@ -38,6 +53,9 @@ export const NAVIGATION = {
             segment: "profile",
             title: "Profile",
             icon: <AccountBoxIcon />,
+        },
+        {
+            kind: "divider",
         },
         {
             segment: "history",

@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { MenuItem, ListItemIcon, Divider } from "@mui/material";
 import Logout from "@mui/icons-material/Logout";
@@ -7,6 +5,7 @@ import Login from "@mui/icons-material/Login";
 import { NAVIGATION } from "../navigation";
 import { useTheme } from "next-themes";
 import { lightTheme, darkTheme } from "../../styles/theme";
+import Link from "next/link";  // Importando Link do Next.js
 
 interface MenuItemsProps {
     isLoggedIn: boolean;
@@ -25,9 +24,17 @@ export default function MenuItems({ isLoggedIn, onLogin, onLogout, onClose }: Me
                 item.kind === "divider" ? (
                     <Divider key={index} style={{ borderColor: currentTheme.border }} />
                 ) : (
-                    <MenuItem key={index} onClick={onClose} style={{ color: currentTheme.text }}>
-                        <ListItemIcon style={{ color: currentTheme.text }}>{item.icon}</ListItemIcon>
-                        {item.title}
+                    <MenuItem
+                        key={index}
+                        onClick={onClose} 
+                        style={{ color: currentTheme.text }}
+                    >
+                        <ListItemIcon style={{ color: currentTheme.text }}>
+                            {item.icon}
+                        </ListItemIcon>
+                        <Link href={`/${item.segment}`} style={{ color: currentTheme.text, textDecoration: 'none' }}>
+                            {item.title}
+                        </Link>
                     </MenuItem>
                 )
             )}
