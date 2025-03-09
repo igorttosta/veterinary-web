@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 const config: Config = {
 	darkMode: ['class'],
@@ -27,8 +28,8 @@ const config: Config = {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				border: {
-        			DEFAULT: 'hsl(var(--border))',
-        		},
+					DEFAULT: 'hsl(var(--border))',
+				},
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
 			},
@@ -41,18 +42,18 @@ const config: Config = {
 			},
 			keyframes: {
 				'smooth-scroll': {
-					'0%': { transform: 'translateY(-10px)', opacity: 0 },
-					'100%': { transform: 'translateY(0)', opacity: 1 },
+					'0%': { transform: 'translateY(-10px)', opacity: '0' },
+					'100%': { transform: 'translateY(0)', opacity: '1' },
 				},
 			},
 		},
 	},
 	plugins: [
 		require("tailwindcss-animate"),
-		function ({ addVariant }) {
+		plugin(({ addVariant }) => {
 			addVariant('scrollbar', '&::-webkit-scrollbar');
 			addVariant('scrollbar-thumb', '&::-webkit-scrollbar-thumb');
-		},
+		}),
 	],
 };
 
