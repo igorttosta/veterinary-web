@@ -2,7 +2,7 @@
 
 import DashboardLayout from "@/components/DashboardLayout";
 
-export default function Page() {
+export default function SettingsPage() {
     return (
         <DashboardLayout>
             <><p>Settings</p></>

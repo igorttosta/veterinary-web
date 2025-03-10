@@ -5,7 +5,7 @@ import Login from "@mui/icons-material/Login";
 import { NAVIGATION } from "../navigation";
 import { useTheme } from "next-themes";
 import { lightTheme, darkTheme } from "../../styles/theme";
-import Link from "next/link";  // Importando Link do Next.js
+import Link from "next/link";
 
 interface MenuItemsProps {
     isLoggedIn: boolean;

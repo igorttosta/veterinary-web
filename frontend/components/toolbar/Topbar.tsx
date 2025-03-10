@@ -9,15 +9,14 @@ import { lightTheme, darkTheme } from "../../styles/theme";
 import { useTheme } from "next-themes";
 import AccountMenu from "../account/AccountMenu";
 import CartSidebar from "../cart/CartSidebar";
+import { useSidebarStore } from "../../store/useSidebarStore";
 
-interface TopbarProps {
-    toggleSidebar: () => void;
-}
-
-export default function Topbar({ toggleSidebar }: TopbarProps) {
+export default function Topbar() {
     const { theme } = useTheme();
     const currentTheme = theme === "dark" ? darkTheme : lightTheme;
     const [isCartOpen, setIsCartOpen] = useState(false);
+    
+    const { toggleSidebar } = useSidebarStore();
 
     return (
         <>

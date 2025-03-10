@@ -2,7 +2,7 @@
 
 import DashboardLayout from "@/components/DashboardLayout";
 
-export default function Page() {
+export default function ConsultationPage() {
     return (
         <DashboardLayout>
             <><p>Consultation</p></>

@@ -3,16 +3,19 @@
 import React from "react";
 import { Box, Menu } from "@mui/material";
 import { useTheme } from "next-themes";
+import { useRouter } from "next/navigation";
 import { lightTheme, darkTheme } from "../../styles/theme";
+import { useAuthStore } from "../../store/authStore";
 import AccountButton from "./AccountButton";
 import MenuItems from "./MenuItems";
 
 export default function AccountMenu() {
     const { theme } = useTheme();
+    const router = useRouter();
     const currentTheme = theme === "dark" ? darkTheme : lightTheme;
 
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-    const [isLoggedIn, setIsLoggedIn] = React.useState<boolean>(false);
+    const { isLoggedIn, logout } = useAuthStore();
 
     const open = Boolean(anchorEl);
 
@@ -24,14 +27,15 @@ export default function AccountMenu() {
         setAnchorEl(null);
     };
 
-    const handleLogout = () => {
-        setIsLoggedIn(false);
+    const handleLogin = () => {
         handleClose();
+        router.push("/user");
     };
 
-    const handleLogin = () => {
-        setIsLoggedIn(true);
+    const handleLogout = () => {
+        logout(); 
         handleClose();
+        router.push("/user"); 
     };
 
     return (
@@ -69,7 +73,12 @@ export default function AccountMenu() {
                 transformOrigin={{ horizontal: "right", vertical: "top" }}
                 anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
             >
-                <MenuItems isLoggedIn={isLoggedIn} onLogin={handleLogin} onLogout={handleLogout} onClose={handleClose} />
+                <MenuItems
+                    isLoggedIn={isLoggedIn}
+                    onLogin={handleLogin}
+                    onLogout={handleLogout}
+                    onClose={handleClose}
+                />
             </Menu>
         </Box>
     );

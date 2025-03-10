@@ -6,16 +6,15 @@ import Link from "next/link";
 import Tooltip from "@mui/material/Tooltip";
 import { lightTheme, darkTheme } from "../../styles/theme";
 import { useTheme } from "next-themes";
+import { useSidebarStore } from "../../store/useSidebarStore";
 
-interface SidebarProps {
-    isSidebarOpen: boolean;
-}
-
-export default function Sidebar({ isSidebarOpen }: SidebarProps) {
+export default function Sidebar() {
     const { theme } = useTheme();
     const pathname = usePathname();
     const currentTheme = theme === "dark" ? darkTheme : lightTheme;
     const sidebarItems = NAVIGATION.sidebar;
+    
+    const { isSidebarOpen } = useSidebarStore();
 
     return (
         <aside
