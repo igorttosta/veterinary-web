@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "name": "Camiseta Branca",
+        "description": "Camiseta básica de algodão.",
+        "price": 49.90,
+        "category": "Roupas",
+        "image": "/images/camiseta-branca.jpg",
+        "stock": 15
+    },
+    {
+        "id": 2,
+        "name": "Tênis Esportivo",
+        "description": "Tênis confortável para corridas e caminhadas.",
+        "price": 199.90,
+        "category": "Calçados",
+        "image": "/images/tenis-esportivo.jpg",
+        "stock": 8
+    },
+    {
+        "id": 3,
+        "name": "Jaqueta de Couro",
+        "description": "Jaqueta estilosa e resistente.",
+        "price": 349.90,
+        "category": "Roupas",
+        "image": "/images/jaqueta-couro.jpg",
+        "stock": 5
+    }
+]  

@@ -8,7 +8,7 @@ import { lightTheme, darkTheme } from "../../styles/theme";
 import { useTheme } from "next-themes";
 import { useSidebarStore } from "../../store/useSidebarStore";
 
-export default function Sidebar() {
+export default function SideLbar() {
     const { theme } = useTheme();
     const pathname = usePathname();
     const currentTheme = theme === "dark" ? darkTheme : lightTheme;

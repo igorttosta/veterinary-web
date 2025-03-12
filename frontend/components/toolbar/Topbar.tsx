@@ -8,7 +8,7 @@ import ThemeToggle from "../ui/theme-toggle";
 import { lightTheme, darkTheme } from "../../styles/theme";
 import { useTheme } from "next-themes";
 import AccountMenu from "../account/AccountMenu";
-import CartSidebar from "../cart/CartSidebar";
+import CartSidebar from "./CartSidebar";
 import { useSidebarStore } from "../../store/useSidebarStore";
 
 export default function Topbar() {

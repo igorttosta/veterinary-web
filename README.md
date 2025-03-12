@@ -39,7 +39,7 @@ This project is a complete platform for managing veterinary clinics, allowing ap
 
 1. **Clone the repository:**
     ```bash
-        git clone https://github.com/your-repo/vetcare.git
+        git clone https://github.com/igorttosta/veterinary-web
     ```
 2. **Start docker-compose:**
     ```bash

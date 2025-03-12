@@ -4,7 +4,6 @@ import type { Metadata } from "next";
 import Theme from "../context/theme-provider";
 import MuiThemeProvider from "../context/mui-theme-provider";
 import { ThemeProvider } from "next-themes";
-import ClientOnly from "../components/ClientOnly";
 
 export const metadata: Metadata = {
   title: "Igor Tosta | Full-stack developer | Personal portfolio",
@@ -32,9 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider enableSystem={true} attribute="class">
           <Theme>
             <MuiThemeProvider>
-              <ClientOnly>
                 <main>{children}</main>
-              </ClientOnly>
             </MuiThemeProvider>
           </Theme>
         </ThemeProvider>
