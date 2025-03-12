@@ -19,7 +19,7 @@ export default function CartItemList() {
                                 <p className="text-sm text-gray-500">{item.quantity}x R$ {item.price.toFixed(2)}</p>
                             </div>
                         </div>
-                        <DeleteIcon onClick={() => removeFromCart(item.id)} />
+                        <DeleteIcon onClick={() => removeFromCart(item.id)} className="cursor-pointer" />
                     </div>
                 ))
             )}

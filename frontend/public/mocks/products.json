@@ -1,29 +1,62 @@
 [
     {
         "id": 1,
-        "name": "Camiseta Branca",
-        "description": "Camiseta básica de algodão.",
-        "price": 49.90,
-        "category": "Roupas",
-        "image": "/images/camiseta-branca.jpg",
+        "name": "Ração Golden",
+        "description": "Ração para cachorro pequeno porte Golden 1kg",
+        "price": 32.90,
+        "category": "Ração",
+        "sub-category": "Cachorro",
+        "image": "/images/golden.png",
         "stock": 15
     },
     {
         "id": 2,
-        "name": "Tênis Esportivo",
-        "description": "Tênis confortável para corridas e caminhadas.",
+        "name": "Ração GranPlus",
+        "description": "Ração para cachorro grande porte GranPlus 15kg",
         "price": 199.90,
-        "category": "Calçados",
-        "image": "/images/tenis-esportivo.jpg",
+        "category": "Ração",
+        "sub-category": "Cachorro",
+        "image": "/images/granplus.png",
         "stock": 8
     },
     {
         "id": 3,
-        "name": "Jaqueta de Couro",
-        "description": "Jaqueta estilosa e resistente.",
-        "price": 349.90,
-        "category": "Roupas",
-        "image": "/images/jaqueta-couro.jpg",
+        "name": "Ração Pedigree",
+        "description": "Ração para cachorro grande porte Pedigree 900g",
+        "price": 34.90,
+        "category": "Ração",
+        "sub-category": "Cachorro",
+        "image": "/images/pedigree.png",
         "stock": 5
+    },
+    {
+        "id": 4,
+        "name": "Bola Porta Petisco",
+        "description": "Brinquedo Para Cachorro Bola Porta Petisco",
+        "price": 11.20,
+        "category": "Brinquedo",
+        "sub-category": "Cachorro",
+        "image": "/images/bola-petisco.png",
+        "stock": 33
+    },
+    {
+        "id": 5,
+        "name": "Osso Dental",
+        "description": "Brinquedo Odontopet Dentalbone Flat Corda 22kg",
+        "price": 16.40,
+        "category": "Brinquedo",
+        "sub-category": "Cachorro",
+        "image": "/images/osso-dental.png",
+        "stock": 7
+    },
+    {
+        "id": 6,
+        "name": "Osso Halter",
+        "description": "Brinquedo Cachorro Osso Halteres Pata macio",
+        "price": 15.70,
+        "category": "Brinquedo",
+        "sub-category": "Cachorro",
+        "image": "/images/osso-halter.png",
+        "stock": 19
     }
 ]  
